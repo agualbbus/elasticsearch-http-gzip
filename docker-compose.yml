@@ -1,0 +1,10 @@
+version: "2"
+services:
+  elasticsearch:
+    build: ./elasticsearch
+    ports:
+      - 9200:9200
+  node:
+    build: .
+    links:
+      - elasticsearch
