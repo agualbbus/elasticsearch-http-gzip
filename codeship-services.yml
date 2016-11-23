@@ -1,0 +1,4 @@
+elasticsearch:
+  image: elasticsearch:latest
+node:
+  image: node:lastest  
