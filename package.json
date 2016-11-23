@@ -1,0 +1,30 @@
+{
+  "name": "elasticsearch-http-gzip",
+  "version": "1.0.0",
+  "description": "Makes elasticsearch-js be able to send gzipped POST requests",
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "babel ./connector-es6.js > ./connector.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agualbbus/elasticsearch-http-gzip.git"
+  },
+  "keywords": [
+    "elasticserach",
+    "elasticsearch-js"
+  ],
+  "author": "Agustin Albertengo <contact@agustinalbertengo.com\">",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/agualbbus/elasticsearch-http-gzip/issues"
+  },
+  "homepage": "https://github.com/agualbbus/elasticsearch-http-gzip#readme",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-eslint": "^7.1.1",
+    "eslint": "^3.10.2",
+    "tape": "^4.6.3"
+  }
+}
