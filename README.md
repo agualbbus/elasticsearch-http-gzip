@@ -1,7 +1,8 @@
 # elasticsearch-http-gzip
-Makes elasticsearch-js be able to send gzipped POST requests
+Makes elasticsearch-js be able to send gzipped POST requests.
 
-## Usage
+Connection handler for sending compressed requests to Elasticsearch
+---
 
 ``` javascript
 var es = require('elasticsearch').Client({
@@ -14,4 +15,4 @@ var es = require('elasticsearch').Client({
 });
 ``` 
 
-NOTE: It doesn't works with AWS elasticsearch service 
+NOTE: It doesn't works with AWS elasticsearch service.
