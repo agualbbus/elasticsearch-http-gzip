@@ -2,11 +2,9 @@
  * A Connection handler for making gzipped http POST request
  *
  * Uses node's zlib to compress request body
- * Define the Amazon ES config and the connection handler
- * in the client configuration:
  *
  * var es = require('elasticsearch').Client({
- *  hosts: 'https://amazon-es-host.us-east-1.es.amazonaws.com',
+ *  hosts: 'http://localhost:9200',
  *  connectionClass: require('elasticsearch-http-gzip'),
  *  compressedConfig: {
  *    protocol: 'https'

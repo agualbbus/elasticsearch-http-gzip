@@ -4,15 +4,18 @@
   "description": "Makes elasticsearch-js be able to send gzipped POST requests",
   "main": "index.js",
   "scripts": {
-    "prepublish": "babel ./connector-es6.js > ./connector.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dockerbuild": "babel ./connector-es6.js > ./node/connector.js && docker-compose build",
+    "dockerelastic": "docker-compose up -d elasticsearch",
+    "dockertest": "npm run dockerelastic && docker-compose up node && docker-compose stop elasticsearch",
+    "test": "tape test/**/*.js",
+    "prepublish": "babel ./connector-es6.js > ./connector.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/agualbbus/elasticsearch-http-gzip.git"
   },
   "keywords": [
-    "elasticserach",
+    "elasticsearch",
     "elasticsearch-js"
   ],
   "author": "Agustin Albertengo <contact@agustinalbertengo.com\">",
@@ -26,5 +29,8 @@
     "babel-eslint": "^7.1.1",
     "eslint": "^3.10.2",
     "tape": "^4.6.3"
+  },
+  "dependencies": {
+    "elasticsearch": "^12.1.0"
   }
 }
