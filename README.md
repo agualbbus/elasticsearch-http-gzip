@@ -16,3 +16,4 @@ var es = require('elasticsearch').Client({
 ``` 
 
 NOTE: It doesn't works with AWS elasticsearch service.
+## docker
